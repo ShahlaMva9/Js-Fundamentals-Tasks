@@ -190,3 +190,130 @@
 //     console.log("1-12 rəqəm intervalinda ədəd daxil edin");
 //     break;
 // }
+
+//21
+
+function numberLenght(number) {
+  let num = number;
+  let lenght = 0;
+  while (num > 0) {
+    lenght++;
+    num = parseInt(num / 10);
+  }
+  return lenght;
+}
+// console.log(numberLenght(12345));
+
+//22
+
+// let sayHi = function (name = "qonaq") {
+//   return `Salam ${name} !`;
+// };
+// console.log(sayHi());
+
+//23
+// function palidormNum(number) {
+//   let numberL = numberLenght(number);
+//   let tNum;
+//   let reverseN = "";
+//   let isPalindorm = false;
+//   for (let i = 1; i <= numberL; i++) {
+//     tNum = Math.trunc((number % 10 ** i) / 10 ** (i - 1));
+//     reverseN += tNum;
+//   }
+
+//   return reverseN == number ? (isPalindorm = true) : (isPalindorm = false);
+// }
+// console.log(palidormNum(417));
+// palidormNum(414);
+
+//24
+// let difNum = (number) => {
+//   let first = Math.trunc(number / 100);
+//   let second = Math.trunc(number / 10) % 10;
+//   let third = number % 10;
+//   if (first == second || first == third || second == third) {
+//     return "Eyni reqemler var";
+//   } else {
+//     return "Ferqli reqemlerdir";
+//   }
+// };
+
+// console.log(difNum(128));
+
+// 25
+
+// let divideTen = (number) => Math.trunc(number / 10) * 10;
+
+// console.log(divideTen(23));
+
+//26
+// let multiply = (n, m = 2) => n ** m;
+// console.log(multiply(2));
+
+//27
+// function findN(number, n) {
+//   let numberL = numberLenght(number);
+//   let nNum;
+//   if (numberL >= n) {
+//     nNum = Math.trunc(Math.trunc(number % 10 ** n) / 10 ** (n - 1));
+//     return nNum;
+//   } else {
+//     return "N rəqəmin uzunluğundan böyükdür";
+//   }
+// }
+
+// console.log(findN(12345, 15));
+//28
+// function simpleNum(number) {
+//   let simple = true;
+//   if (number == 1) {
+//     return "Sade ve ya murekkeb ede deyil";
+//   }
+//   for (let i = 2; i < number; i++) {
+//     if (number % i == 0) {
+//       simple = false;
+//     }
+//   }
+//   return simple;
+// }
+
+// console.log(simpleNum(12));
+
+//29
+// let findOddNum = function (number) {
+//   let smallOddNumCount = 0;
+
+//   for (let i = 1; i < Math.abs(number); i++) {
+//     if (i % 2 == 1) {
+//       smallOddNumCount++;
+//     }
+//   }
+
+//   return smallOddNumCount;
+// };
+
+// console.log(findOddNum(-7));
+
+//30
+
+// function lowCountM(number) {
+//   let hundred = Math.trunc(number / 100);
+//   number -= hundred * 100;
+//   let fifty = Math.trunc(number / 50);
+//   number -= fifty * 50;
+//   let twenty = Math.trunc(number / 20);
+//   number -= twenty * 20;
+//   let ten = Math.trunc(number / 10);
+//   number -= ten * 10;
+//   let five = Math.trunc(number / 5);
+//   number -= five * 5;
+//   let text = `${!hundred ? "" : hundred + "-100"} ${
+//     !fifty ? "" : fifty + "-50"
+//   } ${!twenty ? "" : twenty + "-20"} ${!ten ? "" : ten + "-10"} ${
+//     !five ? "" : five + "-5"
+//   } ${!number ? "" : number + "-1"}`;
+//   return text;
+// }
+
+// console.log(lowCountM(285));
