@@ -315,5 +315,152 @@ function numberLenght(number) {
 //   } ${!number ? "" : number + "-1"}`;
 //   return text;
 // }
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue",
+  isdriverLicence: false,
+};
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const numbers = [1, 2, 3, 4, 5, 6, 3, 2, 3, 3, 7, 7, 1, 2];
+//31
 
+// function objectKeys(obj) {
+//   return Object.keys(obj);
+// }
+// console.log(objectKeys(person));
+
+//32
+
+// const objClone = function (obj) {
+//   return { ...obj };
+// };
+// console.log(objClone(person));
+
+//33
+
+// const strKeys = (obj) => {
+//   const entries = Object.entries(obj);
+//   const strkey = [];
+
+//   for (let i = 0; i < entries.length; i++) {
+//     if (typeof entries[i][1] == "string") {
+//       strkey.push(entries[i][0]);
+//     }
+//   }
+//   return strkey;
+// };
+// console.log(strKeys(person));
+
+//34
+// function createObj(name, surname) {
+//   const newObj = {
+//     name: name,
+//     surname: surname,
+//   };
+//   return newObj;
+// }
+// console.log(createObj("Shahla", "Mammadova"));
+
+//35
+
+// function deleteKey(obj, key) {
+//   delete obj[key];
+//   return obj;
+// }
+// console.log(deleteKey(person, "age"));
+
+//36
+
+// const objLenght = (obj) => Object.entries(obj).length;
+// console.log(objLenght(person));
+
+//37
+// function hasOwn(obj, key) {
+//   const keys = Object.keys(obj);
+//   let hasOwnProp = false;
+//   for (let i = 0; i < keys.length; i++) {
+//     if (keys[i] == key) {
+//       hasOwnProp = true;
+//     }
+//   }
+//   return hasOwnProp;
+// }
+// console.log(hasOwn(person, "agew"));
+
+//38
+
+// const lastElem = (arr) => {
+//   return arr[arr.length - 1];
+// };
+// console.log(lastElem(fruits));
+
+//39
+// const cloneArr = (arr) => [...arr];
+// console.log(cloneArr(fruits));
+
+//40
+// const showN = (arr, n) => {
+//   const newArr = [];
+
+//   for (let i = 0; i < n; i++) {
+//     newArr.push(arr[i]);
+//   }
+
+//   return newArr;
+// };
+// console.log(showN(fruits, 2));
+
+//41
+
+// const showLastN = (arr, n) => {
+//   const reverseArr = arr.reverse();
+//   const newArr = [];
+
+//   for (let i = 0; i < n; i++) {
+//     newArr.push(reverseArr[i]);
+//   }
+//   return newArr;
+// };
+// console.log(showLastN(fruits, 2));
+
+//42
+// const divideArr = (arr) => {
+//   let str = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     str += arr[i] + ",";
+//   }
+//   return str;
+// };
+// divideArr(fruits);
+
+//43
+
+//44
+// function deleteOddNum(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (i % 2 != 0) {
+//       return arr[i];
+//     }
+//   }
+// }
+// deleteOddNum(fruits);
+
+//45
+
+// function deleteN(arr, n = 1) {
+//   arr.splice(n + 1);
+//   return arr;
+// }
+// console.log(deleteN(fruits, 1));
+// console.log(objLenght(person));
 // console.log(lowCountM(285));
+// class Human {
+//   constructor() {
+//     this.gender = "male";
+//   }
+//   printGender() {
+//     console.log(this.gender);
+//   }
+// }
