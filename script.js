@@ -323,7 +323,7 @@ const person = {
   isdriverLicence: false,
 };
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-const numbers = [1, 2, 3, 4, 5, 6, 3, 2, 3, 3, 7, 7, 1, 2];
+const numbers = [2, 3, 0, 3, 5, 6, 6, 3, 0, 2, 3, 1, 1];
 //31
 
 // function objectKeys(obj) {
@@ -436,7 +436,36 @@ const numbers = [1, 2, 3, 4, 5, 6, 3, 2, 3, 3, 7, 7, 1, 2];
 // divideArr(fruits);
 
 //43
+const arr = [7, 2, 3, 2, 3, 2, 2, 7, 7, 7, 6, 7, 7, 7, 7, 2, 2, 2, 2, 2];
 
+function findMostUsingElem(arr) {
+  const obj = {};
+  let maxelem;
+  // add obj keys
+  arr.forEach((el) => {
+    obj[el] = 0;
+  });
+
+  //add obj values
+  arr.forEach((el, i) => {
+    if (!Object.keys(obj).includes(el)) {
+      obj[el]++;
+    }
+  });
+  //find max value
+  maxelem = Math.max(...Object.values(obj));
+
+  //find max key
+
+  const findElemIndex = Object.values(obj).findIndex((el) => el == maxelem);
+  const findElem = Object.entries(obj)[findElemIndex][0];
+  return findElem;
+}
+
+console.log(findMostUsingElem(arr));
+// console.log(Object.keys(obj));
+
+// console.log(saas);
 //44
 // function deleteOddNum(arr) {
 //   for (let i = 0; i < arr.length; i++) {
@@ -464,3 +493,79 @@ const numbers = [1, 2, 3, 4, 5, 6, 3, 2, 3, 3, 7, 7, 1, 2];
 //     console.log(this.gender);
 //   }
 // }
+
+//46
+// numbers.forEach((el) => {
+//   console.log(el);
+// });
+
+//47
+// const joinArr = fruits.reduce((prew, curr) => {
+//   return prew + curr;
+// });
+// console.log(joinArr);
+
+//48
+// const multiply = numbers.reduce((prev, curr) =>
+//   curr != 0 ? prev * curr : prev
+// );
+// console.log(multiply);
+
+//49
+// const arr = [-100, -99, 3, 7, -98, 0, 1, 2];
+// const newArr = arr.map((el) => Math.abs(el));
+// console.log(newArr);
+//50
+// arr.sort((a, b) => a - b);
+// console.log(arr);
+//51 50 ile eyni
+//52
+// const newArrarr = arr.filter((el) => el > 0);
+// console.log(newArrarr);
+//53
+// const uniqueArr = [];
+// const newArr = numbers.forEach((el) => {
+//   if (!uniqueArr.includes(el)) {
+//     uniqueArr.push(el);
+//   }
+// });
+
+// console.log(uniqueArr);
+//54
+// const users = [
+//   {
+//     fullName: "Jenny",
+//     age: 30,
+//     gender: "female",
+//   },
+//   {
+//     fullName: "Steve JObs",
+//     age: 18,
+//     gender: "male",
+//   },
+
+//   {
+//     fullName: "Mark Zum",
+//     age: 40,
+//     gender: "male",
+//   },
+// ];
+//54
+// const usersName = users.map((el) => el.fullName);
+// console.log(usersName);
+//55
+
+// const maleGender = users.filter((el) => {
+//   return el.gender == "male";
+// });
+// //56
+// const femaleGender = users.filter((el) => {
+//   return el.gender == "female";
+// });
+// console.log(femaleGender);
+//57
+// const smth = users.filter((el) => el.age > 20);
+// console.log(smth);
+//57
+// const newArr = users.sort((a, b) => a.age - b.age);
+// console.log(newArr);
